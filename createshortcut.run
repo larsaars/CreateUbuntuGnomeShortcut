@@ -42,6 +42,11 @@ if [ "$nores" = true ] ; then
 	echo "Please download an icon of the app and insert it in the folder /home/${USER}/icons"
 	echo "and enter the file's name"
 	echo "i.e. spotify.png"
+	#new empty line
+	printf "\n"
+	#list files in spotify
+	echo "All files in icons:"
+	ls /home/${USER}/icons
 	#read the image name
 	read IMGPL
 	#set imgp to new value
