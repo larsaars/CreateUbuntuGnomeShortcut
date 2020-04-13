@@ -1,0 +1,70 @@
+#!/bin/bash
+#set no results to false
+nores=false
+#get the name of the file to string
+echo "Please enter the desired app name:"
+read NAME
+#empty line for overview
+printf '\n'
+#search for the name to get a package
+echo "Found packages for ${NAME}:"
+#search via aptitude
+firstout=$(aptitude search '~i!~M '${NAME}'')
+#get if the command returned empty string, if is so, search without the only user installed tag
+if [[ $firstout ]]; then
+	#successfully, echo
+	echo $firstout
+else
+	#search without these tags
+	secout=$(aptitude search ''${NAME}'')
+	if [[ $secout ]]; then
+		#echo the results
+		echo $secout
+	else
+		echo "No results"
+		#no res is true now
+		nores=true
+	fi
+fi
+#empty line for overview
+printf '\n'
+#chose one of them
+echo "Enter one of the package names above"
+echo "i.e. google-chrome-stable"
+echo "If no result is shown, just enter the app name in lower case letters"
+#get the command and icon to string
+read COMM
+#empty line for overview
+printf '\n'
+#if no result has been found, enter here path to an icon file
+IMGP=${COMM}
+if [ "$nores" = true ] ; then
+	echo "Please download an icon of the app and insert it in the folder /home/${USER}/icons"
+	echo "and enter the file's name"
+	echo "i.e. spotify.png"
+	#read the image name
+	read IMGPL
+	#set imgp to new value
+	IMGP="/home/"${USER}"/icons/"${IMGPL}
+fi
+#set file name
+FNAME=${NAME}.desktop
+#create the new file
+touch ${FNAME}
+#write a desktop entry to the file
+echo [Desktop Entry] >> ${FNAME}
+echo Name=${NAME} >> ${FNAME}
+echo Exec=${COMM} >> ${FNAME}
+echo Icon=${IMGP} >> ${FNAME}
+echo Type=Application >> ${FNAME}
+echo "Categories=GTK;GNOME;" >> ${FNAME}
+#file has been written
+#now make the file executable with sudo
+chmod +x ${FNAME}
+#empty line for overview
+printf '\n'
+#last steps for the user
+echo "Created new desktop shortcut for ${NAME}"
+echo "Now right click ${FNAME} on the desktop and select:"
+echo "Allow execution"
+echo "Now your shortcut should be executable"
