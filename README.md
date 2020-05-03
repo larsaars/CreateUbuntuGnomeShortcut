@@ -1,9 +1,12 @@
 # CreateUbuntuShortcut
-#Create ubuntu shortcuts easily without much efford over terminal for gnome environment
+Create ubuntu shortcuts easily without much effort over terminal for gnome environment
 
 This can be executed directly from the GNOME desktop directory or be inserted to bin directory.<br><br>
 
-#To insert this bash script into the bin dir, follow these steps:<br>
+To insert this bash script into the bin dir, follow these steps:<br>
+Open the terminal.<br>
+To enable desktop icons, the gnome tweak tool has to be installed first:<br>
+`sudo apt-get install gnome-tweak-tool gnome-tweaks`<br>
 Since aptitude is needed, if you don't have it already installed, install it via<br>
 `sudo apt-get install aptitude`<br>
 Navigate to the Desktop via cd command in terminal<br>
