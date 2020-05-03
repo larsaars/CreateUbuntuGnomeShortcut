@@ -7,7 +7,7 @@ read NAME
 #empty line for overview
 printf '\n'
 #search for the name to get a package
-echo "Found packages for ${NAME}:"
+echo "Packages found for ${NAME}:"
 #search via aptitude
 firstout=$(aptitude search '~i!~M '${NAME}'')
 #get if the command returned empty string, if is so, search without the only user installed tag
