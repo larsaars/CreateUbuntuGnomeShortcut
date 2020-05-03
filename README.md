@@ -1,4 +1,4 @@
-# CreateUbuntuShortcut
+# Create Ubuntu Shortcut
 Create ubuntu shortcuts easily without much effort over terminal for gnome environment
 
 This can be executed directly from the GNOME desktop directory or be inserted to bin directory.<br><br>
