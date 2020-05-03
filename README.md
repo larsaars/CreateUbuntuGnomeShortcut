@@ -13,7 +13,7 @@ Since aptitude is needed, if you don't have it already installed, install it via
 Navigate to the Desktop via cd command in terminal<br>
 Create a new file:<br>
 `touch createshortcut.run`<br>
-Open the file and copy the file into there.<br>
+Open the newly created file in a text editor and copy the sourcecode of "createshortcut.run" into there.<br>
 Then move file to /usr/bin with:<br>
 `sudo mv createshortcut.run /usr/bin/createshortcut`<br>
 Make the file executable:<br>
