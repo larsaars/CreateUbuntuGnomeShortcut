@@ -44,6 +44,8 @@ if [ "$nores" = true ] ; then
 	echo "i.e. spotify.png"
 	#new empty line
 	printf "\n"
+	#create new direcory
+	mkdir /home/${USER}/icons
 	#list files in spotify
 	echo "All files in icons:"
 	ls /home/${USER}/icons
