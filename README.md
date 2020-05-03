@@ -7,6 +7,7 @@ To insert this bash script into the bin dir, follow these steps:<br>
 Open the terminal.<br>
 To enable desktop icons, the gnome tweak tool has to be installed first:<br>
 `sudo apt-get install gnome-tweak-tool gnome-tweaks`<br>
+In there, search for `icon`, then go on Desktop and enable the option called "Desktop Symbols"<br>
 Since aptitude is needed, if you don't have it already installed, install it via<br>
 `sudo apt-get install aptitude`<br>
 Navigate to the Desktop via cd command in terminal<br>
