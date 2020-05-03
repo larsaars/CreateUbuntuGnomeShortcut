@@ -19,5 +19,5 @@ Then move file to /usr/bin with:<br>
 Make the file executable:<br>
 `sudo chmod +x /usr/bin/createshortcut`<br><br>
 
-Everything is done so far!<br>
+Everything is done so far!<br><br>
 To create shortcuts in .desktop format you just have to execute `createshortcut` when navigated in the desktop folder in the terminal (this can be done via the `cd` command or right-click on desktop -> "open terminal here") and follow the steps!
